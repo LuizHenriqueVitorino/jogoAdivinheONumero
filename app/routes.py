@@ -1,9 +1,8 @@
-from flask import render_template, request, redirect, url_for, session
+from flask import Flask, render_template, request, session
 import random
 
-from . import create_app
-
-app = create_app()
+app = Flask(__name__)
+app.config['SECRET_KEY'] = 'your_secret_key'
 
 @app.route('/', methods=['GET', 'POST'])
 def index():

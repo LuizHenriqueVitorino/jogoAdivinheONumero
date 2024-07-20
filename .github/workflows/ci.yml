@@ -24,6 +24,6 @@ jobs:
     - name: Run tests
       run: |
         . venv/bin/activate
-        flask run --host=0.0.0.0 &  # Inicia a aplicação Flask em segundo plano
-        sleep 5  # Aguarda alguns segundos para garantir que a aplicação esteja em execução
+        flask run --host=0.0.0.0 &
+        sleep 10  # Aguarde mais tempo para garantir que a aplicação esteja em execução
         curl -f http://localhost:5000/  # Verifica se a aplicação está acessível
